@@ -8,9 +8,10 @@ def generate_digest(state):
     return hashlib.sha256(serialized.encode()).hexdigest()
 
 
-print("\n=== EIP STALE AUTHORIZATION DEMO ===\n")
+print("\n=== EIP CONTINUITY VERIFICATION DEMONSTRATION ===\n")
 
-# STEP 1 — Initial authorization snapshot
+
+# STEP 1 — Authorization snapshot
 authorized_state = {
     "user": "agent-42",
     "role": "admin",
@@ -19,15 +20,17 @@ authorized_state = {
 
 authorized_digest = generate_digest(authorized_state)
 
-print("[AUTHORIZED]")
+print("[AUTHORIZATION SNAPSHOT GENERATED]")
 print(f"Authorized State: {authorized_state}")
 print(f"Continuity Digest: {authorized_digest}\n")
 
+
 # STEP 2 — Simulate execution delay
-print("[EXECUTION DELAY]")
+print("[EXECUTION DEFERRED]")
 time.sleep(3)
 
-# STEP 3 — State changes during delay
+
+# STEP 3 — Execution state divergence
 current_state = {
     "user": "agent-42",
     "role": "viewer",
@@ -36,17 +39,18 @@ current_state = {
 
 current_digest = generate_digest(current_state)
 
-print("[STATE CHANGED]")
+print("[EXECUTION STATE DIVERGENCE DETECTED]")
 print(f"Current State: {current_state}")
 print(f"Current Digest: {current_digest}\n")
 
+
 # STEP 4 — Continuity verification
-print("[CONTINUITY VERIFICATION]")
+print("[CONTINUITY REVALIDATION INITIATED]")
 
 if current_digest != authorized_digest:
-    print("\n[CONTINUITY FAILURE DETECTED]")
-    print("[EXECUTION BLOCKED]")
-    print("[PROOF-OF-BLOCK GENERATED]\n")
+    print("\n[CONTINUITY VERIFICATION FAILED]")
+    print("[EXECUTION DENIED]")
+    print("[DETERMINISTIC DENIAL ARTIFACT GENERATED]\n")
 
 else:
     print("\n[CONTINUITY VERIFIED]")
