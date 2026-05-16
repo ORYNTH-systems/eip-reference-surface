@@ -2,15 +2,15 @@
 
 
 
-Execution Integrity Protocol (EIP) is a continuity verification architecture for autonomous, asynchronous, and distributed execution systems.
+Execution Integrity Protocol (EIP) is a continuity verification architecture for autonomous, asynchronous, deferred, and distributed execution systems.
 
 
 
-EIP verifies that the execution state associated with an authorized action remains continuously valid between authorization and effectuation.
+EIP verifies that execution-state conditions associated with a previously authorized execution request remain consistent between authorization and effectuation.
 
 
 
-EIP does not derive execution authority.
+EIP does not derive execution authority, admissibility, or governance state.
 
 
 
@@ -18,7 +18,7 @@ Execution authority derivation, admissibility evaluation, and governance determi
 
 
 
-EIP operates on continuity preservation and execution-time state verification.
+EIP operates exclusively on execution-state continuity verification and execution-time revalidation.
 
 
 
@@ -30,15 +30,15 @@ EIP operates on continuity preservation and execution-time state verification.
 
 
 
-An execution request that was previously authorized must be revalidated against current execution-state conditions at the moment execution occurs.
+Previously authorized execution requests must be revalidated against current execution-state conditions immediately prior to effectuation.
 
 
 
-If continuity verification fails, execution does not occur.
+If execution-state continuity verification fails, execution is deterministically denied.
 
 
 
-Capability alone does not imply execution authorization.
+Previously authorized execution requests do not imply execution-time continuity validity.
 
 
 
@@ -74,7 +74,7 @@ Continuity Revalidation
 
 ↓
 
-Execution Authorization
+Execution Continuity Verified
 
 OR
 
@@ -138,7 +138,7 @@ Current demonstrations include:
 
 \- deterministic execution denial,
 
-\- and denial artifact generation.
+\- and deterministic denial artifact generation.
 
 
 
@@ -154,7 +154,7 @@ EIP models execution continuity as a verification problem rather than a static a
 
 
 
-Authorization validity at request time is treated as insufficient for asynchronous or deferred execution systems operating under mutable state conditions.
+Request-time authorization validity is treated as insufficient for deferred, asynchronous, or distributed execution environments operating under mutable execution-state conditions.
 
 
 
@@ -174,11 +174,11 @@ EIP enforces fail-closed execution behavior.
 
 
 
-If continuity verification fails at execution time, execution does not occur.
+If execution-state continuity verification fails immediately prior to effectuation, execution is deterministically denied.
 
 
 
-Denied execution attempts generate deterministic denial artifacts for auditability, reproducibility, and execution verification purposes.
+Denied execution attempts generate deterministic denial artifacts for auditability, reproducibility, execution verification, and continuity-failure analysis purposes.
 
 
 
@@ -212,7 +212,7 @@ This demonstration models:
 
 5\. deterministic execution denial,
 
-6\. and denial artifact generation.
+6\. and deterministic denial artifact generation.
 
 
 
@@ -228,17 +228,25 @@ The EIP Reference Surface is an evolving infrastructure reference implementation
 
 
 
-\- continuity verification modeling,
-
-\- execution-state validation research,
+\- execution-state continuity verification modeling,
 
 \- deferred execution integrity analysis,
 
 \- deterministic denial modeling,
 
+\- continuity-failure analysis,
+
 \- and autonomous execution continuity demonstrations.
 
 
 
-The reference surface is not intended to represent a production deployment system or complete institutional execution environment.
+The reference surface is not intended to represent:
+
+
+
+\- a production deployment system,
+
+\- a complete institutional execution environment,
+
+\- or a formally verified distributed execution runtime.
 
