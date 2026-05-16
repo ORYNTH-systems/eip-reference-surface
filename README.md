@@ -6,7 +6,7 @@ Execution Integrity Protocol (EIP) is a continuity verification architecture for
 
 
 
-EIP verifies that execution-state conditions associated with a previously authorized execution request remain consistent between authorization and effectuation.
+EIP verifies that execution-state conditions associated with a previously authorized execution request have not diverged between authorization and effectuation.
 
 
 
@@ -18,7 +18,7 @@ Execution authority derivation, admissibility evaluation, and governance determi
 
 
 
-EIP operates exclusively on execution-state continuity verification and execution-time revalidation.
+EIP operates exclusively on execution-state continuity verification, continuity revalidation, and deterministic denial semantics.
 
 
 
@@ -58,7 +58,7 @@ Agent Runtime
 
 ↓
 
-Authorization Snapshot Generation
+Execution-State Snapshot Generation
 
 ↓
 
@@ -74,7 +74,7 @@ Continuity Revalidation
 
 ↓
 
-Execution Continuity Verified
+Continuity Verification Succeeded
 
 OR
 
@@ -102,7 +102,7 @@ frontend/
 
 backend/
 
-&#x20;   continuity verification and execution enforcement components
+&#x20;   continuity verification and deterministic denial components
 
 
 
@@ -202,7 +202,7 @@ This demonstration models:
 
 
 
-1\. authorization snapshot generation,
+1\. execution-state snapshot generation,
 
 2\. deferred execution,
 
