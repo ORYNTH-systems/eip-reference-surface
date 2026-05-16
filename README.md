@@ -2,27 +2,23 @@
 
 
 
-Execution Integrity Protocol (EIP) is a continuity enforcement architecture for autonomous and distributed execution systems.
+Execution Integrity Protocol (EIP) is a continuity verification architecture for autonomous, asynchronous, and distributed execution systems.
 
 
 
-EIP verifies that execution authority remains continuously valid between authorization and effectuation.
+EIP verifies that the execution state associated with an authorized action remains continuously valid between authorization and effectuation.
 
 
 
-The EIP Reference Surface demonstrates:
+EIP does not derive execution authority.
 
 
 
-\- continuity verification,
+Execution authority derivation, admissibility evaluation, and governance determination are external concerns.
 
-\- execution-time admissibility validation,
 
-\- replay resistance,
 
-\- deterministic denial semantics,
-
-\- and proof-of-block generation.
+EIP operates on continuity preservation and execution-time state verification.
 
 
 
@@ -34,11 +30,15 @@ The EIP Reference Surface demonstrates:
 
 
 
-Execution authority must remain valid at the exact moment execution occurs.
+An execution request that was previously authorized must be revalidated against current execution-state conditions at the moment execution occurs.
 
 
 
-Capability alone does not imply authority.
+If continuity verification fails, execution does not occur.
+
+
+
+Capability alone does not imply execution authorization.
 
 
 
@@ -50,7 +50,7 @@ Capability alone does not imply authority.
 
 
 
-Canonical execution sequence:
+Canonical continuity sequence:
 
 
 
@@ -58,15 +58,15 @@ Agent Runtime
 
 ↓
 
-Authorization Snapshot
+Authorization Snapshot Generation
 
 ↓
 
-Execution Delay
+Execution Deferment
 
 ↓
 
-State Mutation
+Execution-State Mutation
 
 ↓
 
@@ -74,11 +74,15 @@ Continuity Revalidation
 
 ↓
 
-Execution Authorization OR Deterministic Block
+Execution Authorization
+
+OR
+
+Deterministic Denial
 
 ↓
 
-Proof Generation
+Deterministic Denial Artifact Generation
 
 
 
@@ -104,7 +108,7 @@ backend/
 
 demos/
 
-&#x20;   deterministic continuity enforcement demonstrations
+&#x20;   deterministic continuity verification demonstrations
 
 
 
@@ -128,11 +132,33 @@ Current demonstrations include:
 
 \- stale authorization continuity verification,
 
-\- delayed execution enforcement,
+\- deferred execution continuity enforcement,
 
-\- deterministic execution blocking,
+\- execution-state divergence detection,
 
-\- proof-of-block generation.
+\- deterministic execution denial,
+
+\- and denial artifact generation.
+
+
+
+\---
+
+
+
+\# Continuity Verification Model
+
+
+
+EIP models execution continuity as a verification problem rather than a static authorization problem.
+
+
+
+Authorization validity at request time is treated as insufficient for asynchronous or deferred execution systems operating under mutable state conditions.
+
+
+
+Execution requests are therefore revalidated against current execution-state conditions immediately prior to effectuation.
 
 
 
@@ -152,7 +178,7 @@ If continuity verification fails at execution time, execution does not occur.
 
 
 
-Blocked execution attempts generate deterministic denial artifacts for auditability and verification purposes.
+Denied execution attempts generate deterministic denial artifacts for auditability, reproducibility, and execution verification purposes.
 
 
 
@@ -172,13 +198,13 @@ demos/stale-authorization/demo.py
 
 
 
-This demonstration shows:
+This demonstration models:
 
 
 
 1\. authorization snapshot generation,
 
-2\. delayed execution,
+2\. deferred execution,
 
 3\. execution-state divergence,
 
@@ -186,7 +212,7 @@ This demonstration shows:
 
 5\. deterministic execution denial,
 
-6\. proof generation.
+6\. and denial artifact generation.
 
 
 
@@ -194,9 +220,25 @@ This demonstration shows:
 
 
 
-\# Status
+\# Scope
 
 
 
-The EIP Reference Surface is an evolving infrastructure reference implementation intended for execution-governance research, continuity verification modeling, and autonomous execution integrity demonstrations.
+The EIP Reference Surface is an evolving infrastructure reference implementation intended for:
+
+
+
+\- continuity verification modeling,
+
+\- execution-state validation research,
+
+\- deferred execution integrity analysis,
+
+\- deterministic denial modeling,
+
+\- and autonomous execution continuity demonstrations.
+
+
+
+The reference surface is not intended to represent a production deployment system or complete institutional execution environment.
 
