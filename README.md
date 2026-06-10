@@ -1,8 +1,8 @@
-EIP Reference Surface
+\# EIP Reference Surface
 
 
 
-Reference implementation accompanying the published Execution Integrity Protocol (EIP) research.
+Reference implementation accompanying the published \*\*Execution Integrity Protocol (EIP)\*\* research.
 
 
 
@@ -26,7 +26,11 @@ If continuity verification fails, execution is deterministically denied.
 
 
 
-Core Invariant
+\---
+
+
+
+\## Core Invariant
 
 
 
@@ -42,7 +46,11 @@ If continuity verification fails, execution is denied.
 
 
 
-Architectural Scope
+\---
+
+
+
+\## Architectural Scope
 
 
 
@@ -54,13 +62,13 @@ EIP does not determine:
 
 
 
-execution authority
+\* execution authority
 
-admissibility
+\* admissibility
 
-governance state
+\* governance state
 
-authorization policy
+\* authorization policy
 
 
 
@@ -72,23 +80,31 @@ EIP focuses on:
 
 
 
-execution-state continuity verification
+\* execution-state continuity verification
 
-continuity revalidation
+\* continuity revalidation
 
-execution-state divergence detection
+\* execution-state divergence detection
 
-deterministic denial semantics
+\* deterministic denial semantics
 
-continuity-failure attribution
+\* continuity-failure attribution
 
-Continuity Verification Flow
+
+
+\---
+
+
+
+\## Continuity Verification Flow
 
 
 
 Canonical execution sequence:
 
 
+
+```text
 
 Agent Runtime
 
@@ -124,7 +140,19 @@ Deterministic Denial
 
 Deterministic Denial Artifact Generation
 
-Repository Structure
+```
+
+
+
+\---
+
+
+
+\## Repository Structure
+
+
+
+```text
 
 frontend/
 
@@ -148,7 +176,15 @@ docs/
 
 &#x20;   architecture and reproducibility documentation
 
-Demonstrations
+```
+
+
+
+\---
+
+
+
+\## Demonstrations
 
 
 
@@ -156,17 +192,23 @@ Current demonstrations include:
 
 
 
-stale authorization continuity verification
+\* stale authorization continuity verification
 
-deferred execution continuity enforcement
+\* deferred execution continuity enforcement
 
-execution-state divergence detection
+\* execution-state divergence detection
 
-deterministic execution denial
+\* deterministic execution denial
 
-deterministic denial artifact generation
+\* deterministic denial artifact generation
 
-Reference Demonstration
+
+
+\---
+
+
+
+\## Reference Demonstration
 
 
 
@@ -174,7 +216,11 @@ Primary operational reference:
 
 
 
+```text
+
 demos/stale-authorization/demo.py
+
+```
 
 
 
@@ -182,19 +228,25 @@ This demonstration models:
 
 
 
-execution-state snapshot generation
+1\. execution-state snapshot generation
 
-deferred execution
+2\. deferred execution
 
-execution-state divergence
+3\. execution-state divergence
 
-continuity revalidation
+4\. continuity revalidation
 
-deterministic execution denial
+5\. deterministic execution denial
 
-deterministic denial artifact generation
+6\. deterministic denial artifact generation
 
-Deterministic Denial Semantics
+
+
+\---
+
+
+
+\## Deterministic Denial Semantics
 
 
 
@@ -206,15 +258,21 @@ When continuity verification fails immediately prior to effectuation, execution 
 
 
 
-auditability
+\* auditability
 
-reproducibility
+\* reproducibility
 
-execution verification
+\* execution verification
 
-continuity-failure analysis
+\* continuity-failure analysis
 
-Scope
+
+
+\---
+
+
+
+\## Scope
 
 
 
@@ -222,15 +280,15 @@ The EIP Reference Surface is intended for:
 
 
 
-execution-state continuity verification modeling
+\* execution-state continuity verification modeling
 
-deferred execution integrity analysis
+\* deferred execution integrity analysis
 
-deterministic denial modeling
+\* deterministic denial modeling
 
-continuity-failure analysis
+\* continuity-failure analysis
 
-autonomous execution continuity demonstrations
+\* autonomous execution continuity demonstrations
 
 
 
@@ -238,17 +296,23 @@ The reference surface is not intended to represent:
 
 
 
-a production deployment system
+\* a production deployment system
 
-a complete institutional execution environment
+\* a complete institutional execution environment
 
-a formally verified distributed execution runtime
-
-Related Publication
+\* a formally verified distributed execution runtime
 
 
 
-Execution Integrity Protocol (EIP): Deterministic Rule Identity Continuity for Adaptive Execution Systems
+\---
+
+
+
+\## Related Publication
+
+
+
+\*\*Execution Integrity Protocol (EIP): Deterministic Rule Identity Continuity for Adaptive Execution Systems\*\*
 
 
 
@@ -272,13 +336,19 @@ This repository serves as the public reference surface associated with the publi
 
 
 
-Related Resources
+\### Related Resources
 
-ORYNTH GitHub Organization:
 
-https://github.com/ORYNTH-systems
 
-GitHub Sponsors:
+\* ORYNTH GitHub Organization:
 
-https://github.com/sponsors/ORYNTH-systems
+&#x20; https://github.com/ORYNTH-systems
+
+
+
+\* GitHub Sponsors:
+
+&#x20; https://github.com/sponsors/ORYNTH-systems
+
+
 
