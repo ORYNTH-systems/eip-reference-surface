@@ -250,3 +250,51 @@ The reference surface is not intended to represent:
 
 \- or a formally verified distributed execution runtime.
 
+
+
+\---
+
+
+
+\# Related Publication
+
+
+
+\*\*Execution Integrity Protocol (EIP): Deterministic Rule Identity Continuity for Adaptive Execution Systems\*\*
+
+
+
+DOI:
+
+https://doi.org/10.5281/zenodo.20127973
+
+
+
+Author: Ashley S. Harris
+
+
+
+ORCID Research Profile:  
+
+https://orcid.org/0009-0000-4470-9941
+
+
+
+This repository serves as a public reference surface associated with the published EIP research.
+
+
+
+\## Related Resources
+
+
+
+\- ORYNTH GitHub Organization:  
+
+&#x20; https://github.com/ORYNTH-systems
+
+
+
+\- GitHub Sponsors:  
+
+&#x20; https://github.com/sponsors/ORYNTH-systems
+
