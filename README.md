@@ -274,7 +274,7 @@ Author: Ashley S. Harris
 
 
 
-ORCID Research Profile:  
+ORCID Research Profile:
 
 https://orcid.org/0009-0000-4470-9941
 
@@ -288,13 +288,15 @@ This repository serves as a public reference surface associated with the publish
 
 
 
-\- ORYNTH GitHub Organization:  
+\- ORYNTH GitHub Organization:
 
 &#x20; https://github.com/ORYNTH-systems
 
 
 
-\- GitHub Sponsors:  
+\- GitHub Sponsors:
 
 &#x20; https://github.com/sponsors/ORYNTH-systems
+
+
 
